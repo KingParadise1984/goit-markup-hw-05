@@ -738,6 +738,6 @@ img {
 }
 .modal-close-btn:hover .modal-clone-btn-icon,
 .modal-close-btn:focus .modal-clone-btn-icon {
-  fill: var(--title-text-color);
+  fill: var(--primary-text-color);
 }
 /* ====================madal window============================ */
