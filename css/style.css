@@ -346,7 +346,7 @@ img {
   color: #ffffff;
   font-weight: 700;
   font-size: 14px;
-  line-height: 1.14px;
+  line-height: 1.14;
   align-items: center;
   justify-content: center;
   letter-spacing: 0.03em;
@@ -548,7 +548,7 @@ img {
   height: 100%;
   overflow: hidden;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 1.55;
   letter-spacing: 0.03em;
   color: var(--primary-white-color);
   background-color: rgba(33, 150, 243, 0.9);
