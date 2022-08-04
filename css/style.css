@@ -142,7 +142,7 @@ img {
   margin-bottom: -1px;
   background-color: var(--title-text-color);
   opacity: 0;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-info-contact:hover::after,
 .site-info-contact:focus::after {
@@ -150,6 +150,9 @@ img {
 }
 .site-info-contact.current::after {
   opacity: 1;
+}
+.site-info-contact.current {
+  color: var(--title-text-color);
 }
 
 .site-info-contact {
@@ -376,17 +379,7 @@ img {
   border-radius: 0px 0px 4px 4px;
   background-color: var(--primary-white-color);
 }
-.social-list-icon {
-  fill: #afb1b8;
-}
-.social-list-link:hover,
-.social-list-link:focus {
-  background-color: var(--title-text-color);
-}
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon {
-  fill: var(--primary-white-color);
-}
+
 .employees-card {
   padding-top: 30px;
   padding-bottom: 30px;
@@ -406,6 +399,21 @@ img {
   line-height: 1.18;
   letter-spacing: 0.03em;
 }
+
+.social-list-icon {
+  fill: #afb1b8;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--title-text-color);
+}
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--primary-white-color);
+}
+
 .social-list-link {
   display: flex;
   justify-content: center;
@@ -415,7 +423,7 @@ img {
   border-radius: 50%;
   background-color: var(--primary-white-color);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list {
@@ -437,13 +445,13 @@ img {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-logo-info:hover,
 .company-logo-info:focus {
   border: 1px solid var(--title-text-color);
-  color: var(--title-text-color);
+  fill: var(--title-text-color);
 }
 .company-logo-info:hover .company-list-icon,
 .company-logo-info:focus .company-list-icon {
@@ -451,6 +459,7 @@ img {
 }
 .company-list-icon {
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .company-headline-titling {
   margin-bottom: 50px;
